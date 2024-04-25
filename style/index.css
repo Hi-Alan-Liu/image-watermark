@@ -1,0 +1,14 @@
+.container {
+  max-width: 800px;
+}
+
+.draw-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draw-app canvas {
+  width: 100%;
+  max-width: 800px;
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Hi-Alan-Liu/image-watermark/main/images/image.png">
+    <meta property="og:title" content="浮水印工具">
+    <meta property="og:description" content="由 Alan 自製的浮水印工具，歡迎各位使用。">
+    <title>浮水印工具</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="style/index.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row mt-5">
+        <div class="col-12 my-2">
+          <input type="file" class="form-control col-4" id="inputFile">
+        </div>
+
+        <div class="col-12 col-md-4 my-2">
+          <div class="input-group h-100">
+            <span class="input-group-text" id="panColor">文字顏色</span>
+            <input type="color" class="form-control h-100" id="colorpicker" aria-describedby="panColor" value="#ffffff">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 my-2">
+          <div class="input-group h-100">
+            <span class="input-group-text" id="panColor">文字大小</span>
+            <input type="number" class="form-control h-100" id="fontSize" value="30" min="0">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 my-2">
+          <div class="input-group h-100">
+            <span class="input-group-text" id="panColor">文字間格</span>
+            <input type="number" class="form-control h-100" id="spacing" value="180" min="0">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 my-2">
+          <div class="input-group h-100">
+            <span class="input-group-text" id="panColor">文字透明度</span>
+            <input type="number" class="form-control h-100" id="opacity" value="80" max="100" min="0">
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 my-2">
+          <div class="input-group h-100">
+            <span class="input-group-text" id="panColor">文字頃斜</span>
+            <input type="number" class="form-control h-100" id="rotation" value="10" max="360" min="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text">浮水印文字</span>
+        <input type="text" class="form-control" id="watermarkText" placeholder="輸入浮水印文字" value="＜僅供公司申辦申請之用＞" aria-describedby="uploadText">
+        <button class="btn btn-outline-secondary" type="button" id="uploadText">新增浮水印</button>
+      </div>
+
+      <div class="draw-app my-4">
+        <canvas class="border border-dark" id="art"></canvas>
+      </div>
+
+      <button type="button" id="saveCanvas" class="btn btn-primary mt-2 float-end">生成圖片</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
